@@ -5,9 +5,8 @@ purpose: during login, if sysdate between date of 10 and 21 every month --> norm
  
 left panel: on processing --> add validation
 
-right panel: property
-type: rows returned
-sql query:
+right panel: property -->
+type: rows returned sql query
  
 paste this
 ```
@@ -15,3 +14,5 @@ select 1 as ada from dual
 where sysdate between to_date(to_char(sysdate,'yyyy-mm-')||'10', 'yyyy-mm-dd') 
 and to_date(to_char(sysdate,'yyyy-mm-')||'21', 'yyyy-mm-dd')
 ```
+
+note: I use v19.2 apex
